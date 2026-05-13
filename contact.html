@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | GeoResilience Hub</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark-mode"> <!-- Default to dark mode -->
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i data-lucide="globe-2" class="logo-icon"></i>
+                <span>GeoResilience Hub</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="map.html">Interactive Map</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+                    <i data-lucide="sun" class="sun-icon"></i>
+                    <i data-lucide="moon" class="moon-icon"></i>
+                </button>
+                <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                <button class="mobile-menu-btn" aria-label="Open menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header" style="padding-top: 10rem; padding-bottom: 3rem; text-align: center;">
+        <div class="container">
+            <h1>Get In <span class="highlight">Touch</span></h1>
+            <p style="max-width: 600px; margin: 0 auto; color: var(--text-secondary); font-size: 1.1rem;">
+                Ready to start mapping your next project? Drop us a line and we'll get back to you within 24 hours.
+            </p>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section section" style="padding-top: 0;">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <!-- Contact Form -->
+                <div class="contact-form-container glass-card">
+                    <form action="https://formspree.io/f/placeholder" method="POST"> <!-- Replace with real formspree or emailjs endpoint -->
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required placeholder="John Doe">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-control" required placeholder="john@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="organization">Organization (Optional)</label>
+                            <input type="text" id="organization" name="organization" class="form-control" placeholder="NGO, District Assembly, etc.">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Interest</label>
+                            <select id="service" name="service" class="form-control" required>
+                                <option value="" disabled selected>Select a service...</option>
+                                <option value="flood">Flood & Environmental Analysis</option>
+                                <option value="urban">Land & Urban Planning</option>
+                                <option value="gis">GIS Mapping & Data Support</option>
+                                <option value="other">Other / Custom Project</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Project Details</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" required placeholder="Tell us about your study area and requirements..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info & Map -->
+                <div class="contact-info-wrapper">
+                    <div class="contact-info-card glass-card" style="margin-bottom: 2rem;">
+                        <div class="contact-detail">
+                            <i data-lucide="map-pin"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Cape Coast, Central Region<br>Ghana</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <i data-lucide="phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>Gifty: 0556834650<br>Emmanuel: +233553776346</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail" style="margin-bottom: 0;">
+                            <i data-lucide="mail"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>emmanuelyerbo@gmail.com<br>giftygyameraannor32@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Embedded Map -->
+                    <div class="map-container">
+                        <!-- Standard Google Maps iframe pointing to Cape Coast, Ghana -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127116.59107936681!2d-1.3414902127608226!3d5.118949575971436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdd00732387140f%3A0x63777d1dc00db2c4!2sCape%20Coast%2C%20Ghana!5e0!3m2!1sen!2sus!4v1715474000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <i data-lucide="globe-2" class="logo-icon"></i>
+                    <span>GeoResilience Hub</span>
+                </a>
+                <p>Turning Spatial Data into Real-World Solutions.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/emmanuelyerbo"><i data-lucide="linkedin"></i></a>
+                    <a href="https://github.com/Emmanuel-Yerbo"><i data-lucide="github"></i></a>
+                    <a href="#"><i data-lucide="twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Solutions</h4>
+                <ul>
+                    <li><a href="map.html">Interactive Flood Map</a></li>
+                    <li><a href="services.html#urban">Urban Planning</a></li>
+                    <li><a href="services.html#data">Spatial Data Analysis</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i data-lucide="map-pin"></i> Cape Coast, Ghana</p>
+                <p><i data-lucide="phone"></i> 0556834650 / +233553776346</p>
+                <p><i data-lucide="mail"></i> emmanuelyerbo@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GeoResilience Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
