@@ -76,4 +76,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // 4. FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        if (question) {
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                // Close all other FAQs
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                });
+                // Toggle clicked FAQ
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        }
+    });
 });

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | GeoResilience Hub</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark-mode"> <!-- Default to dark mode -->
+    
+    <!-- Navbar (Same as index.html) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i data-lucide="globe-2" class="logo-icon"></i>
+                <span>GeoResilience Hub</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="map.html">Interactive Map</a></li>
+                <li><a href="pricing.html" class="active">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+                    <i data-lucide="sun" class="sun-icon"></i>
+                    <i data-lucide="moon" class="moon-icon"></i>
+                </button>
+                <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                <button class="mobile-menu-btn" aria-label="Open menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header" style="padding-top: 10rem; padding-bottom: 4rem; text-align: center;">
+        <div class="container">
+            <h1>Transparent <span class="highlight">Pricing</span></h1>
+            <p style="max-width: 600px; margin: 0 auto; color: var(--text-secondary); font-size: 1.1rem;">
+                Unlike our competitors, we believe in upfront pricing. Choose the tier that matches the scale of your project.
+            </p>
+        </div>
+    </header>
+
+    <!-- Pricing Grid -->
+    <section class="pricing-section section" style="padding-top: 0;">
+        <div class="container">
+            <div class="pricing-grid">
+                
+                <!-- Basic Tier -->
+                <div class="pricing-card glass-card">
+                    <h3>Basic</h3>
+                    <div class="price">GHS 500<span>/map</span></div>
+                    <p class="desc">Perfect for students, researchers, or simple reports.</p>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check"></i> 1 High-Res Cartographic Map</li>
+                        <li><i data-lucide="check"></i> Standard Styling & Layout</li>
+                        <li><i data-lucide="check"></i> PDF / JPEG / PNG Formats</li>
+                        <li><i data-lucide="check"></i> 2 Revision Rounds</li>
+                        <li><i data-lucide="x" class="x-icon"></i> No Raw Data Provided</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline">Request Basic</a>
+                </div>
+
+                <!-- Standard Tier -->
+                <div class="pricing-card glass-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Standard</h3>
+                    <div class="price">GHS 2,500<span>/project</span></div>
+                    <p class="desc">Ideal for district assemblies and real estate planning.</p>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check"></i> Multi-layer Spatial Analysis</li>
+                        <li><i data-lucide="check"></i> Site Suitability / LULC Map</li>
+                        <li><i data-lucide="check"></i> Basic Hydrological Checks</li>
+                        <li><i data-lucide="check"></i> Delivery in 5-7 Days</li>
+                        <li><i data-lucide="check"></i> Includes Source Files (QGIS/ArcGIS)</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Choose Standard</a>
+                </div>
+
+                <!-- Premium Tier -->
+                <div class="pricing-card glass-card">
+                    <h3>Premium</h3>
+                    <div class="price">Custom<span></span></div>
+                    <p class="desc">For NGOs and large-scale environmental modeling.</p>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check"></i> Full Project Lifecycle Support</li>
+                        <li><i data-lucide="check"></i> Advanced GeoAI / GEE Modeling</li>
+                        <li><i data-lucide="check"></i> Interactive Web Dashboard</li>
+                        <li><i data-lucide="check"></i> Field Data Collection (Drone/GPS)</li>
+                        <li><i data-lucide="check"></i> Comprehensive Technical Report</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline">Get Custom Quote</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section section" style="padding-top: 0;">
+        <div class="container">
+            <div class="section-header center">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="faq-wrapper">
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <button class="faq-question">What data do I need to provide? <i data-lucide="chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>Depending on the project, you might provide GPS coordinates, boundary shapefiles, or simply the name of your study area. We can source public satellite data (like Landsat, Sentinel, or SRTM) ourselves if you don't have proprietary data.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <button class="faq-question">What is your standard turnaround time? <i data-lucide="chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>Basic maps take 24–48 hours. Standard analytical projects usually take 5–7 days. Large-scale premium projects, especially those requiring field data collection or interactive web maps, are scoped individually.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <button class="faq-question">Do you offer discounts for academic research? <i data-lucide="chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>Yes. We strongly support the academic community. Contact us with your student ID or institutional affiliation, and we can offer tailored rates for your thesis or research paper GIS needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <i data-lucide="globe-2" class="logo-icon"></i>
+                    <span>GeoResilience Hub</span>
+                </a>
+                <p>Turning Spatial Data into Real-World Solutions.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/emmanuelyerbo"><i data-lucide="linkedin"></i></a>
+                    <a href="https://github.com/Emmanuel-Yerbo"><i data-lucide="github"></i></a>
+                    <a href="#"><i data-lucide="twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Solutions</h4>
+                <ul>
+                    <li><a href="map.html">Interactive Flood Map</a></li>
+                    <li><a href="services.html#urban">Urban Planning</a></li>
+                    <li><a href="services.html#data">Spatial Data Analysis</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i data-lucide="map-pin"></i> Cape Coast, Ghana</p>
+                <p><i data-lucide="phone"></i> 0556834650 / +233553776346</p>
+                <p><i data-lucide="mail"></i> emmanuelyerbo@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GeoResilience Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
