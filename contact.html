@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact GeoResilience Hub for geospatial consulting in Ghana. Get a quote for flood mapping, urban planning, or GIS data support services.">
     <title>Contact Us | GeoResilience Hub</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Lucide Icons (pinned version) -->
+    <script src="https://unpkg.com/lucide@0.263.1"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -45,6 +47,22 @@
         </div>
     </nav>
 
+    <!-- Mobile Navigation -->
+    <div class="mobile-overlay"></div>
+    <div class="mobile-nav">
+        <div class="mobile-nav-header">
+            <button class="mobile-nav-close" aria-label="Close menu"><i data-lucide="x"></i></button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="map.html">Interactive Map</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+    </div>
+
     <!-- Page Header -->
     <header class="page-header" style="padding-top: 10rem; padding-bottom: 3rem; text-align: center;">
         <div class="container">
@@ -62,7 +80,7 @@
                 
                 <!-- Contact Form -->
                 <div class="contact-form-container glass-card">
-                    <form action="https://formspree.io/f/placeholder" method="POST"> <!-- Replace with real formspree or emailjs endpoint -->
+                    <form action="https://formspree.io/f/placeholder" method="POST"> <!-- TODO: Replace 'placeholder' with your real Formspree form ID before going live -->
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" class="form-control" required placeholder="John Doe">
@@ -125,7 +143,7 @@
                     </div>
                     
                     <!-- Embedded Map -->
-                    <div class="map-container">
+                    <div class="contact-map">
                         <!-- Standard Google Maps iframe pointing to Cape Coast, Ghana -->
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127116.59107936681!2d-1.3414902127608226!3d5.118949575971436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdd00732387140f%3A0x63777d1dc00db2c4!2sCape%20Coast%2C%20Ghana!5e0!3m2!1sen!2sus!4v1715474000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>

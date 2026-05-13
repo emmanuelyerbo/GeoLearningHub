@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore GeoResilience Hub's geospatial services: flood risk mapping, land use planning, GIS cartography, and environmental analysis for West Africa.">
     <title>Our Services | GeoResilience Hub</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Lucide Icons (pinned version) -->
+    <script src="https://unpkg.com/lucide@0.263.1"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -45,6 +47,22 @@
         </div>
     </nav>
 
+    <!-- Mobile Navigation -->
+    <div class="mobile-overlay"></div>
+    <div class="mobile-nav">
+        <div class="mobile-nav-header">
+            <button class="mobile-nav-close" aria-label="Close menu"><i data-lucide="x"></i></button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="map.html">Interactive Map</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
     <!-- Page Header -->
     <header class="page-header" style="padding-top: 10rem; padding-bottom: 2rem; text-align: center;">
         <div class="container">
@@ -60,7 +78,7 @@
         <div class="container">
             
             <!-- Service 1 -->
-            <div class="service-detail-card glass-card" id="flood">
+            <div class="service-detail-card glass-card reveal" id="flood">
                 <div class="service-detail-text">
                     <h3>Flood & Environmental Analysis</h3>
                     <p>Leveraging remote sensing and GeoAI, we identify vulnerable zones and monitor environmental changes over time. We provide crucial data for disaster risk reduction and climate resilience planning.</p>
@@ -81,7 +99,7 @@
             </div>
 
             <!-- Service 2 -->
-            <div class="service-detail-card glass-card" id="urban">
+            <div class="service-detail-card glass-card reveal" id="urban">
                 <div class="service-detail-text">
                     <h3>Land & Urban Planning</h3>
                     <p>We supply district assemblies and real estate developers with high-resolution land use classifications and site suitability models to ensure sustainable infrastructure development.</p>
@@ -102,7 +120,7 @@
             </div>
 
             <!-- Service 3 -->
-            <div class="service-detail-card glass-card" id="data">
+            <div class="service-detail-card glass-card reveal" id="data">
                 <div class="service-detail-text">
                     <h3>GIS Mapping & Data Support</h3>
                     <p>High-quality cartography and rigorous spatial analysis for NGOs, academic researchers, and corporate clients. We translate raw coordinates into compelling visual narratives.</p>

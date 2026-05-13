@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the founders of GeoResilience Hub — Emmanuel Yerbo (GeoAI & Hydrology) and Gifty Gyamera-Annor (Land & Urban Planning). 30+ ESRI certifications.">
     <title>About Us | GeoResilience Hub</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Lucide Icons (pinned version) -->
+    <script src="https://unpkg.com/lucide@0.263.1"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="dark-mode"> <!-- Default to dark mode -->
+<body class="dark-mode">
     
-    <!-- Navbar (Same as index.html) -->
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
@@ -45,6 +47,22 @@
         </div>
     </nav>
 
+    <!-- Mobile Navigation -->
+    <div class="mobile-overlay"></div>
+    <div class="mobile-nav">
+        <div class="mobile-nav-header">
+            <button class="mobile-nav-close" aria-label="Close menu"><i data-lucide="x"></i></button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="map.html">Interactive Map</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
     <!-- Page Header -->
     <header class="page-header" style="padding-top: 10rem; padding-bottom: 4rem; text-align: center;">
         <div class="container">
@@ -62,34 +80,34 @@
                 <h2>Meet The Founders</h2>
             </div>
             
-            <div class="grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+            <div class="grid-2">
                 <!-- Emmanuel Profile -->
-                <div class="team-card glass-card" style="padding: 2.5rem; text-align: center;">
-                    <div class="profile-image-placeholder" style="width: 150px; height: 150px; background: var(--bg-secondary); border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; border: 2px dashed var(--border-color);">
+                <div class="team-card glass-card reveal">
+                    <div class="profile-image-placeholder">
                         <i data-lucide="user" style="width: 48px; height: 48px; color: var(--text-secondary);"></i>
                     </div>
                     <h3>Emmanuel Yerbo</h3>
-                    <h4 style="color: var(--accent-green); margin-bottom: 1rem;">GeoAI & Hydrology Lead</h4>
-                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem; text-align: left;">
+                    <h4>GeoAI & Hydrology Lead</h4>
+                    <p>
                         Holding a First Class BSc in Geography and Regional Planning from UCC, Emmanuel specializes in deep learning, GeoAI, and advanced hydrological modeling. His research in flood susceptibility mapping using Google Earth Engine drives our environmental risk analysis.
                     </p>
-                    <div class="social-links" style="justify-content: center;">
+                    <div class="social-links">
                         <a href="https://www.linkedin.com/in/emmanuelyerbo" target="_blank"><i data-lucide="linkedin"></i></a>
                         <a href="https://github.com/Emmanuel-Yerbo" target="_blank"><i data-lucide="github"></i></a>
                     </div>
                 </div>
 
                 <!-- Gifty Profile -->
-                <div class="team-card glass-card" style="padding: 2.5rem; text-align: center;">
-                    <div class="profile-image-placeholder" style="width: 150px; height: 150px; background: var(--bg-secondary); border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; border: 2px dashed var(--border-color);">
+                <div class="team-card glass-card reveal">
+                    <div class="profile-image-placeholder">
                         <i data-lucide="user" style="width: 48px; height: 48px; color: var(--text-secondary);"></i>
                     </div>
                     <h3>Gifty Gyamera-Annor</h3>
-                    <h4 style="color: var(--accent-green); margin-bottom: 1rem;">Land & Urban Planning Lead</h4>
-                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem; text-align: left;">
+                    <h4>Land & Urban Planning Lead</h4>
+                    <p>
                         Gifty brings extensive expertise in land use analysis, site suitability, and urban expansion mapping. Her focus on producing high-quality, decision-support spatial data ensures that developers and government assemblies have the accurate maps they need.
                     </p>
-                    <div class="social-links" style="justify-content: center;">
+                    <div class="social-links">
                         <a href="#"><i data-lucide="linkedin"></i></a>
                         <a href="mailto:giftygyameraannor32@gmail.com"><i data-lucide="mail"></i></a>
                     </div>
@@ -100,23 +118,23 @@
 
     <!-- Certifications & Tools -->
     <section class="tools-section section" style="background: var(--bg-secondary);">
-        <div class="container">
+        <div class="container reveal">
             <div class="section-header center">
                 <h2>Our Tech Stack & Certifications</h2>
                 <p>We leverage industry-leading software and hold 30+ ESRI Professional Certificates.</p>
             </div>
-            <div class="tools-grid" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; align-items: center;">
-                <div class="tool-tag" style="padding: 0.75rem 1.5rem; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 30px; font-weight: 500;">ArcGIS Pro</div>
-                <div class="tool-tag" style="padding: 0.75rem 1.5rem; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 30px; font-weight: 500;">QGIS</div>
-                <div class="tool-tag" style="padding: 0.75rem 1.5rem; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 30px; font-weight: 500;">Google Earth Engine</div>
-                <div class="tool-tag" style="padding: 0.75rem 1.5rem; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 30px; font-weight: 500;">Python & GeoAI</div>
-                <div class="tool-tag" style="padding: 0.75rem 1.5rem; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 30px; font-weight: 500;">Pix4D Drone Mapping</div>
-                <div class="tool-tag" style="padding: 0.75rem 1.5rem; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 30px; font-weight: 500;">ENVI</div>
+            <div class="tools-grid">
+                <div class="tool-tag">ArcGIS Pro</div>
+                <div class="tool-tag">QGIS</div>
+                <div class="tool-tag">Google Earth Engine</div>
+                <div class="tool-tag">Python & GeoAI</div>
+                <div class="tool-tag">Pix4D Drone Mapping</div>
+                <div class="tool-tag">ENVI</div>
             </div>
         </div>
     </section>
 
-    <!-- Footer (Same as index.html) -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-brand">
