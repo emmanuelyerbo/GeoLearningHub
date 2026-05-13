@@ -80,11 +80,10 @@
                     <span class="dot yellow"></span>
                     <span class="dot green"></span>
                 </div>
-                <div class="mockup-body">
-                    <div class="placeholder-image">
-                        <i data-lucide="map" style="width: 48px; height: 48px;"></i>
-                        <span>Interactive Flood Map Demo</span>
-                    </div>
+                <div class="mockup-body" style="overflow: hidden; padding: 0; border-radius: 0 0 12px 12px;">
+                    <a href="map.html" style="display: block; width: 100%; height: 100%; position: relative;">
+                        <iframe src="https://geospatial-analysis-433017.projects.earthengine.app/view/flood" style="width: 100%; height: 100%; border: none; pointer-events: none;" loading="lazy"></iframe>
+                    </a>
                 </div>
             </div>
         </div>
@@ -94,8 +93,8 @@
     <section class="app-showcase section">
         <div class="container glass-panel showcase-flex reveal">
             <div class="showcase-text">
-                <h2>Volta Region Flood Vulnerability Rater</h2>
-                <p>Don't just look at static maps. Use our interactive Google Earth Engine tool to instantly assess flood risks across the Volta Region.</p>
+                <h2>Accra Flood Susceptibility Map</h2>
+                <p>Don't just look at static maps. Use our interactive Google Earth Engine tool to instantly assess flood risks across Accra.</p>
                 <ul class="feature-list">
                     <li><i data-lucide="check-circle"></i> 6 Conditioning Factors (Elevation, LULC, HAND, etc.)</li>
                     <li><i data-lucide="check-circle"></i> Click-to-Query Risk Assessment</li>
@@ -109,9 +108,8 @@
                     <div class="risk-item"><span class="color-box risk-medium"></span> Medium Risk</div>
                     <div class="risk-item"><span class="color-box risk-low"></span> Low Risk</div>
                 </div>
-                <!-- PLACEHOLDER: GEE Map Screenshot -->
-                <div class="placeholder-image map-placeholder">
-                    <span>Map View Placeholder</span>
+                <div style="width: 100%; height: 300px; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-color);">
+                    <iframe src="https://geospatial-analysis-433017.projects.earthengine.app/view/flood" style="width: 100%; height: 100%; border: none;" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
