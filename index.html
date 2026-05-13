@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoResilience Hub | Geospatial Solutions</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark-mode"> <!-- Default to dark mode -->
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i data-lucide="globe-2" class="logo-icon"></i>
+                <span>GeoResilience Hub</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="map.html">Interactive Map</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+                    <i data-lucide="sun" class="sun-icon"></i>
+                    <i data-lucide="moon" class="moon-icon"></i>
+                </button>
+                <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                <button class="mobile-menu-btn" aria-label="Open menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Turning Spatial Data into <span class="highlight">Real-World Solutions</span></h1>
+            <p>Advanced GIS, drone mapping, and flood risk analysis for West Africa. We help NGOs, governments, and developers make data-driven decisions.</p>
+            <div class="hero-buttons">
+                <a href="services.html" class="btn btn-primary">Explore Services</a>
+                <a href="map.html" class="btn btn-outline">Try Our Flood Map <i data-lucide="arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <!-- PLACEHOLDER for interactive map preview or glowing globe -->
+            <div class="glass-card map-preview-card">
+                <div class="mockup-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="mockup-body">
+                    <div class="placeholder-image">
+                        <i data-lucide="map" style="width: 48px; height: 48px;"></i>
+                        <span>Interactive Flood Map Demo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- App Showcase / Key Differentiator -->
+    <section class="app-showcase section">
+        <div class="container glass-panel showcase-flex">
+            <div class="showcase-text">
+                <h2>Volta Region Flood Vulnerability Rater</h2>
+                <p>Don't just look at static maps. Use our interactive Google Earth Engine tool to instantly assess flood risks across the Volta Region.</p>
+                <ul class="feature-list">
+                    <li><i data-lucide="check-circle"></i> 6 Conditioning Factors (Elevation, LULC, HAND, etc.)</li>
+                    <li><i data-lucide="check-circle"></i> Click-to-Query Risk Assessment</li>
+                    <li><i data-lucide="check-circle"></i> Research-Backed Methodology</li>
+                </ul>
+                <a href="map.html" class="btn btn-primary mt-4">Launch Interactive Map</a>
+            </div>
+            <div class="showcase-graphic">
+                <div class="risk-legend">
+                    <div class="risk-item"><span class="color-box risk-high"></span> High Risk</div>
+                    <div class="risk-item"><span class="color-box risk-medium"></span> Medium Risk</div>
+                    <div class="risk-item"><span class="color-box risk-low"></span> Low Risk</div>
+                </div>
+                <!-- PLACEHOLDER: GEE Map Screenshot -->
+                <div class="placeholder-image map-placeholder">
+                    <span>Map View Placeholder</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview section">
+        <div class="container">
+            <div class="section-header center">
+                <h2>Our Core Expertise</h2>
+                <p>Comprehensive geospatial services tailored for planning and resilience.</p>
+            </div>
+            <div class="grid-3">
+                <div class="service-card glass-card">
+                    <div class="icon-wrapper"><i data-lucide="waves"></i></div>
+                    <h3>Flood & Environmental</h3>
+                    <p>Flood risk mapping, environmental change detection, and water risk analysis to build climate resilience.</p>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="icon-wrapper"><i data-lucide="building-2"></i></div>
+                    <h3>Land & Urban Planning</h3>
+                    <p>Land use/cover mapping, site suitability, and urban expansion analysis for sustainable development.</p>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="icon-wrapper"><i data-lucide="database"></i></div>
+                    <h3>GIS Mapping & Data Support</h3>
+                    <p>Professional map design, spatial data analysis, and technical GIS support for research and reporting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3 class="counter" data-target="50">0</h3>
+                    <p>Projects Delivered</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="counter" data-target="10">0</h3>
+                    <p>Districts Served</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="counter" data-target="30">0</h3>
+                    <p>ESRI Certifications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <i data-lucide="globe-2" class="logo-icon"></i>
+                    <span>GeoResilience Hub</span>
+                </a>
+                <p>Turning Spatial Data into Real-World Solutions.</p>
+                <div class="social-links">
+                    <a href="#"><i data-lucide="linkedin"></i></a>
+                    <a href="#"><i data-lucide="github"></i></a>
+                    <a href="#"><i data-lucide="twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Solutions</h4>
+                <ul>
+                    <li><a href="map.html">Interactive Flood Map</a></li>
+                    <li><a href="services.html#urban">Urban Planning</a></li>
+                    <li><a href="services.html#data">Spatial Data Analysis</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i data-lucide="map-pin"></i> Cape Coast, Ghana</p>
+                <p><i data-lucide="phone"></i> 0556834650 / +233553776346</p>
+                <p><i data-lucide="mail"></i> info@georesiliencehub.com</p> <!-- PLACEHOLDER -->
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GeoResilience Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
