@@ -6,13 +6,10 @@
     <meta name="description" content="GeoResilience Hub — Advanced GIS, drone mapping, and flood risk analysis for West Africa. Data-driven geospatial solutions for NGOs, governments, and developers.">
     <title>GeoResilience Hub | Geospatial Solutions</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <!-- Lucide Icons (pinned version) -->
     <script src="https://unpkg.com/lucide@0.263.1"></script>
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="dark-mode">
@@ -21,7 +18,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <i data-lucide="globe-2" class="logo-icon"></i>
+                <img src="img/logo.jpeg" alt="GeoResilience Hub Logo" class="logo-img">
                 <span>GeoResilience Hub</span>
             </a>
             
@@ -39,7 +36,6 @@
                     <i data-lucide="sun" class="sun-icon"></i>
                     <i data-lucide="moon" class="moon-icon"></i>
                 </button>
-                <a href="contact.html" class="btn btn-primary">Get Quote</a>
                 <button class="mobile-menu-btn" aria-label="Open menu">
                     <i data-lucide="menu"></i>
                 </button>
@@ -89,68 +85,39 @@
         </div>
     </header>
 
-    <!-- App Showcase / Key Differentiator -->
-    <section class="app-showcase section">
-        <div class="container glass-panel showcase-flex reveal">
-            <div class="showcase-text">
-                <h2>Accra Flood Susceptibility Map</h2>
-                <p>Don't just look at static maps. Use our interactive Google Earth Engine tool to instantly assess flood risks across Accra.</p>
-                <ul class="feature-list">
-                    <li><i data-lucide="check-circle"></i> 6 Conditioning Factors (Elevation, LULC, HAND, etc.)</li>
-                    <li><i data-lucide="check-circle"></i> Click-to-Query Risk Assessment</li>
-                    <li><i data-lucide="check-circle"></i> Research-Backed Methodology</li>
-                </ul>
-                <a href="map.html" class="btn btn-primary mt-4">Launch Interactive Map</a>
-            </div>
-            <div class="showcase-graphic">
-                <div class="risk-legend">
-                    <div class="risk-item"><span class="color-box risk-high"></span> High Risk</div>
-                    <div class="risk-item"><span class="color-box risk-medium"></span> Medium Risk</div>
-                    <div class="risk-item"><span class="color-box risk-low"></span> Low Risk</div>
-                </div>
-                <div style="width: 100%; height: 300px; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-color);">
-                    <iframe src="https://geospatial-analysis-433017.projects.earthengine.app/view/flood" style="width: 100%; height: 100%; border: none;" loading="lazy"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Overview -->
+    <!-- Our Core Expertise -->
     <section class="services-overview section">
         <div class="container">
             <div class="section-header center">
                 <h2>Our Core Expertise</h2>
-                <p>Comprehensive geospatial services tailored for planning and resilience.</p>
+                <p>Comprehensive geospatial services tailored for planning, research, and resilience.</p>
             </div>
             <div class="grid-3">
                 <div class="service-card glass-card reveal">
-                    <div class="icon-wrapper"><i data-lucide="waves"></i></div>
-                    <h3>Flood & Environmental</h3>
-                    <p>Flood risk mapping, environmental change detection, and water risk analysis to build climate resilience.</p>
+                    <div class="icon-wrapper"><img src="img/icon_gis_mapping.png" alt="GIS and Mapping Services"></div>
+                    <h3>GIS & Mapping Services</h3>
+                    <p>Professional land cover mapping, satellite image analysis, flood risk modelling, and GIS database development for environmental and planning projects.</p>
                 </div>
                 <div class="service-card glass-card reveal">
-                    <div class="icon-wrapper"><i data-lucide="building-2"></i></div>
-                    <h3>Land & Urban Planning</h3>
-                    <p>Land use/cover mapping, site suitability, and urban expansion analysis for sustainable development.</p>
+                    <div class="icon-wrapper"><img src="img/icon_research_data.png" alt="Research and Data Analysis"></div>
+                    <h3>Research & Data Analysis Support</h3>
+                    <p>End-to-end spatial data analysis for academic theses, research projects, and publications — including R, SPSS, geostatistics, and map design.</p>
                 </div>
                 <div class="service-card glass-card reveal">
-                    <div class="icon-wrapper"><i data-lucide="database"></i></div>
-                    <h3>GIS Mapping & Data Support</h3>
-                    <p>Professional map design, spatial data analysis, and technical GIS support for research and reporting.</p>
+                    <div class="icon-wrapper"><img src="img/icon_field_survey.png" alt="Field Data Collection"></div>
+                    <h3>Field Data Collection & Survey</h3>
+                    <p>GPS ground truthing, KoboToolbox survey design, participatory community mapping, and project monitoring & evaluation in the field.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Preview -->
-    <section class="testimonials-preview section" style="background: var(--bg-secondary);">
-        <div class="container reveal">
-            <div class="section-header center">
-                <h2>What Our Clients Say</h2>
-                <p>See how our geospatial solutions are making an impact across West Africa.</p>
-            </div>
-            <div style="text-align: center;">
-                <a href="testimonials.html" class="btn btn-outline">Read Client Success Stories <i data-lucide="arrow-right"></i></a>
+                <div class="service-card glass-card reveal">
+                    <div class="icon-wrapper"><img src="img/icon_drone_mapping.png" alt="Drone Mapping"></div>
+                    <h3>Drone Data Acquisition & Analysis</h3>
+                    <p>Professional UAV flights for orthomosaics, elevation models, agricultural monitoring, and high-resolution infrastructure mapping.</p>
+                </div>
+                <div class="service-card glass-card reveal">
+                    <div class="icon-wrapper"><img src="img/icon_gis_training.png" alt="GIS Training"></div>
+                    <h3>GIS Training & Capacity Building</h3>
+                    <p>Hands-on training workshops in GIS, remote sensing, QGIS, ArcGIS, drone mapping, and spatial data collection for teams and individuals.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -175,19 +142,45 @@
         </div>
     </section>
 
+    <!-- Who We Work With -->
+    <section class="who-section section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header center">
+                <h2>Who We Work With</h2>
+                <p>Trusted by organizations across West Africa to deliver reliable geospatial insights.</p>
+            </div>
+            <div class="who-grid">
+                <div class="who-card glass-card reveal">
+                    <div class="who-icon"><i data-lucide="heart-handshake"></i></div>
+                    <h4>NGOs & Development Projects</h4>
+                </div>
+                <div class="who-card glass-card reveal">
+                    <div class="who-icon"><i data-lucide="graduation-cap"></i></div>
+                    <h4>Researchers & Universities</h4>
+                </div>
+                <div class="who-card glass-card reveal">
+                    <div class="who-icon"><i data-lucide="book-open"></i></div>
+                    <h4>Students & Academic Projects</h4>
+                </div>
+                <div class="who-card glass-card reveal">
+                    <div class="who-icon"><i data-lucide="landmark"></i></div>
+                    <h4>Environmental & Planning Institutions</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-brand">
                 <a href="index.html" class="logo">
-                    <i data-lucide="globe-2" class="logo-icon"></i>
+                    <img src="img/logo.jpeg" alt="GeoResilience Hub Logo" class="logo-img">
                     <span>GeoResilience Hub</span>
                 </a>
                 <p>Turning Spatial Data into Real-World Solutions.</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/emmanuelyerbo"><i data-lucide="linkedin"></i></a>
-                    <a href="https://github.com/Emmanuel-Yerbo"><i data-lucide="github"></i></a>
-                    <a href="#"><i data-lucide="twitter"></i></a>
+                <div class="social-links" style="margin-top: 1rem;">
+                    <a href="index.html"><img src="img/logo.jpeg" alt="GeoResilience Hub" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;"></a>
                 </div>
             </div>
             <div class="footer-links">
@@ -218,11 +211,7 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="js/main.js"></script>
-    <script>
-        lucide.createIcons();
-    </script>
-
+    <script>lucide.createIcons();</script>
 </body>
 </html>

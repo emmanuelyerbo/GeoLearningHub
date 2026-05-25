@@ -3,28 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore GeoResilience Hub's geospatial services: flood risk mapping, land use planning, GIS cartography, and environmental analysis for West Africa.">
+    <meta name="description" content="Explore GeoResilience Hub's geospatial services: GIS mapping, research support, field data collection, drone mapping, and GIS training for West Africa.">
     <title>Our Services | GeoResilience Hub</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <!-- Lucide Icons (pinned version) -->
     <script src="https://unpkg.com/lucide@0.263.1"></script>
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="dark-mode"> <!-- Default to dark mode -->
+<body class="dark-mode">
     
-    <!-- Navbar (Same as index.html) -->
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <i data-lucide="globe-2" class="logo-icon"></i>
+                <img src="img/logo.jpeg" alt="GeoResilience Hub Logo" class="logo-img">
                 <span>GeoResilience Hub</span>
             </a>
-            
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
@@ -33,16 +29,12 @@
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-
             <div class="nav-actions">
                 <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
                     <i data-lucide="sun" class="sun-icon"></i>
                     <i data-lucide="moon" class="moon-icon"></i>
                 </button>
-                <a href="contact.html" class="btn btn-primary">Get Quote</a>
-                <button class="mobile-menu-btn" aria-label="Open menu">
-                    <i data-lucide="menu"></i>
-                </button>
+                <button class="mobile-menu-btn" aria-label="Open menu"><i data-lucide="menu"></i></button>
             </div>
         </div>
     </nav>
@@ -66,9 +58,9 @@
     <!-- Page Header -->
     <header class="page-header" style="padding-top: 10rem; padding-bottom: 2rem; text-align: center;">
         <div class="container">
-            <h1>Our <span class="highlight">Expertise</span></h1>
+            <h1>Our <span class="highlight">Services</span></h1>
             <p style="max-width: 600px; margin: 0 auto; color: var(--text-secondary); font-size: 1.1rem;">
-                Advanced geospatial solutions tailored to solve complex environmental and urban planning challenges.
+                Advanced geospatial solutions tailored to solve complex environmental, academic, and urban planning challenges.
             </p>
         </div>
     </header>
@@ -77,85 +69,112 @@
     <section class="services-detail-section section">
         <div class="container">
             
-            <!-- Service 1 -->
-            <div class="service-detail-card glass-card reveal" id="flood">
+            <!-- Service 1: Geospatial & Mapping -->
+            <div class="service-detail-card glass-card reveal" id="geospatial">
                 <div class="service-detail-text">
-                    <h3>Flood & Environmental Analysis</h3>
-                    <p>Leveraging remote sensing and GeoAI, we identify vulnerable zones and monitor environmental changes over time. We provide crucial data for disaster risk reduction and climate resilience planning.</p>
+                    <h3>Geospatial & Mapping Services</h3>
+                    <p>Leveraging remote sensing, GeoAI, and industry-standard GIS platforms, we produce high-quality spatial products for environmental monitoring, disaster planning, and land administration.</p>
                     <ul>
-                        <li><i data-lucide="check"></i> Regional Flood Susceptibility Mapping</li>
-                        <li><i data-lucide="check"></i> Multi-Criteria Hydrological Modeling (HAND, SRTM)</li>
-                        <li><i data-lucide="check"></i> Environmental Change & Vegetation Health Detection</li>
+                        <li><i data-lucide="check"></i> Land Use / Land Cover Mapping</li>
+                        <li><i data-lucide="check"></i> Satellite Image Analysis</li>
+                        <li><i data-lucide="check"></i> Flood Risk and Disaster Mapping</li>
+                        <li><i data-lucide="check"></i> Environmental Change Detection</li>
+                        <li><i data-lucide="check"></i> Climate Vulnerability Mapping</li>
+                        <li><i data-lucide="check"></i> Coastal and Mangrove Ecosystem Mapping</li>
+                        <li><i data-lucide="check"></i> GIS Database Development</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-outline mt-4">Discuss Your Project</a>
                 </div>
                 <div class="service-detail-image">
-                    <!-- PLACEHOLDER IMAGE -->
-                    <div style="text-align: center;">
-                        <i data-lucide="waves" style="width: 64px; height: 64px; color: var(--accent-green); margin-bottom: 1rem;"></i>
-                        <p>Flood Mapping Sample</p>
-                    </div>
+                    <img src="img/service_geospatial.png" alt="Geospatial & Mapping Services">
                 </div>
             </div>
 
-            <!-- Service 2 -->
-            <div class="service-detail-card glass-card reveal" id="urban">
+            <!-- Service 2: Research & Data Analysis -->
+            <div class="service-detail-card glass-card reveal" id="research">
                 <div class="service-detail-text">
-                    <h3>Land & Urban Planning</h3>
-                    <p>We supply district assemblies and real estate developers with high-resolution land use classifications and site suitability models to ensure sustainable infrastructure development.</p>
+                    <h3>Research & Data Analysis Support</h3>
+                    <p>We support the academic and professional research community with rigorous spatial data processing, statistical analysis, and publication-ready cartographic outputs.</p>
                     <ul>
-                        <li><i data-lucide="check"></i> LULC (Land Use / Land Cover) Classification</li>
-                        <li><i data-lucide="check"></i> Automated Building Footprint Extraction</li>
-                        <li><i data-lucide="check"></i> Urban Sprawl & Heat Island Analysis</li>
+                        <li><i data-lucide="check"></i> GIS Mapping for Theses and Research Projects</li>
+                        <li><i data-lucide="check"></i> Spatial Data Analysis (R, GIS, SPSS)</li>
+                        <li><i data-lucide="check"></i> Remote Sensing Data Processing</li>
+                        <li><i data-lucide="check"></i> Research Data Visualization and Map Design</li>
+                        <li><i data-lucide="check"></i> Spatial Modelling and Geostatistics</li>
+                        <li><i data-lucide="check"></i> Academic Research Support</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-outline mt-4">Discuss Your Project</a>
                 </div>
                 <div class="service-detail-image">
-                    <!-- PLACEHOLDER IMAGE -->
-                    <div style="text-align: center;">
-                        <i data-lucide="building-2" style="width: 64px; height: 64px; color: var(--accent-gold); margin-bottom: 1rem;"></i>
-                        <p>Urban Planning Sample</p>
-                    </div>
+                    <div class="placeholder-icon"><i data-lucide="bar-chart-3" style="width: 64px; height: 64px; color: var(--accent-gold);"></i></div>
                 </div>
             </div>
 
-            <!-- Service 3 -->
-            <div class="service-detail-card glass-card reveal" id="data">
+            <!-- Service 3: Field Data Collection -->
+            <div class="service-detail-card glass-card reveal" id="fieldwork">
                 <div class="service-detail-text">
-                    <h3>GIS Mapping & Data Support</h3>
-                    <p>High-quality cartography and rigorous spatial analysis for NGOs, academic researchers, and corporate clients. We translate raw coordinates into compelling visual narratives.</p>
+                    <h3>Field Data Collection & Surveys</h3>
+                    <p>We provide end-to-end field data collection using GPS devices, mobile survey tools, and participatory approaches for projects that require ground truth verification.</p>
                     <ul>
-                        <li><i data-lucide="check"></i> Cartographic Map Design for Reports</li>
-                        <li><i data-lucide="check"></i> Academic Thesis GIS Support</li>
-                        <li><i data-lucide="check"></i> Community Participatory Mapping & Data Collection</li>
+                        <li><i data-lucide="check"></i> GPS Mapping and Ground Truthing</li>
+                        <li><i data-lucide="check"></i> KoboToolbox / Survey123 Survey Design</li>
+                        <li><i data-lucide="check"></i> Participatory Mapping with Communities</li>
+                        <li><i data-lucide="check"></i> Environmental Field Data Collection</li>
+                        <li><i data-lucide="check"></i> Project Monitoring & Evaluation Mapping</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-outline mt-4">Discuss Your Project</a>
                 </div>
                 <div class="service-detail-image">
-                    <!-- PLACEHOLDER IMAGE -->
-                    <div style="text-align: center;">
-                        <i data-lucide="map" style="width: 64px; height: 64px; color: var(--accent-green); margin-bottom: 1rem;"></i>
-                        <p>Cartography Sample</p>
-                    </div>
+                    <div class="placeholder-icon"><i data-lucide="map-pin" style="width: 64px; height: 64px; color: var(--accent-green);"></i></div>
+                </div>
+            </div>
+
+            <!-- Service 4: Drone & High-Resolution Mapping -->
+            <div class="service-detail-card glass-card reveal" id="drone">
+                <div class="service-detail-text">
+                    <h3>Drone & High-Resolution Mapping</h3>
+                    <p>Our certified drone pilots deliver ultra-high-resolution aerial data products for infrastructure surveys, agricultural assessments, and environmental monitoring.</p>
+                    <ul>
+                        <li><i data-lucide="check"></i> Drone Mapping for Land and Infrastructure</li>
+                        <li><i data-lucide="check"></i> UAV Image Processing</li>
+                        <li><i data-lucide="check"></i> Orthomosaic and Elevation Models</li>
+                        <li><i data-lucide="check"></i> Agricultural and Environmental Monitoring</li>
+                    </ul>
+                </div>
+                <div class="service-detail-image">
+                    <div class="placeholder-icon"><i data-lucide="plane" style="width: 64px; height: 64px; color: var(--accent-green);"></i></div>
+                </div>
+            </div>
+
+            <!-- Service 5: GIS Training & Capacity Building -->
+            <div class="service-detail-card glass-card reveal" id="training">
+                <div class="service-detail-text">
+                    <h3>GIS Training & Capacity Building</h3>
+                    <p>We run hands-on workshops and training programmes to equip teams, students, and professionals with practical GIS and remote sensing skills.</p>
+                    <ul>
+                        <li><i data-lucide="check"></i> Introduction to GIS and Remote Sensing</li>
+                        <li><i data-lucide="check"></i> QGIS and ArcGIS Training</li>
+                        <li><i data-lucide="check"></i> Drone Mapping Basics</li>
+                        <li><i data-lucide="check"></i> Spatial Data Collection Training</li>
+                        <li><i data-lucide="check"></i> GIS for Environmental Research</li>
+                    </ul>
+                </div>
+                <div class="service-detail-image">
+                    <div class="placeholder-icon"><i data-lucide="users" style="width: 64px; height: 64px; color: var(--accent-gold);"></i></div>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- Footer (Same as index.html) -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-brand">
                 <a href="index.html" class="logo">
-                    <i data-lucide="globe-2" class="logo-icon"></i>
+                    <img src="img/logo.jpeg" alt="GeoResilience Hub Logo" class="logo-img">
                     <span>GeoResilience Hub</span>
                 </a>
                 <p>Turning Spatial Data into Real-World Solutions.</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/emmanuelyerbo"><i data-lucide="linkedin"></i></a>
-                    <a href="https://github.com/Emmanuel-Yerbo"><i data-lucide="github"></i></a>
-                    <a href="#"><i data-lucide="twitter"></i></a>
+                <div class="social-links" style="margin-top: 1rem;">
+                    <a href="index.html"><img src="img/logo.jpeg" alt="GeoResilience Hub" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;"></a>
                 </div>
             </div>
             <div class="footer-links">
@@ -170,8 +189,8 @@
                 <h4>Solutions</h4>
                 <ul>
                     <li><a href="map.html">Interactive Flood Map</a></li>
-                    <li><a href="services.html#urban">Urban Planning</a></li>
-                    <li><a href="services.html#data">Spatial Data Analysis</a></li>
+                    <li><a href="services.html#drone">Drone Mapping</a></li>
+                    <li><a href="services.html#training">GIS Training</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
@@ -186,10 +205,7 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="js/main.js"></script>
-    <script>
-        lucide.createIcons();
-    </script>
+    <script>lucide.createIcons();</script>
 </body>
 </html>

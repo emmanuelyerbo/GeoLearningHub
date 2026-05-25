@@ -195,6 +195,13 @@ ul {
     color: var(--text-primary);
 }
 
+.logo-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    object-fit: contain;
+}
+
 .logo-icon {
     color: var(--accent-green);
 }
@@ -497,11 +504,19 @@ body.dark-mode .moon-icon { display: none; }
     align-items: center;
     justify-content: center;
     margin-bottom: 1.5rem;
+    overflow: hidden;
 }
 
 .icon-wrapper i {
     width: 30px;
     height: 30px;
+}
+
+.icon-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
 .service-card h3 {
@@ -537,6 +552,47 @@ body.dark-mode .moon-icon { display: none; }
 .stat-item p {
     color: var(--text-secondary);
     font-weight: 500;
+}
+
+/* ==========================================================================
+   Who We Work With
+   ========================================================================== */
+.who-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    text-align: center;
+}
+
+.who-card {
+    padding: 2rem 1.5rem;
+}
+
+.who-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-green);
+}
+
+.who-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    background: rgba(46, 204, 113, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-green);
+}
+
+.who-icon i {
+    width: 24px;
+    height: 24px;
+}
+
+.who-card h4 {
+    font-size: 1rem;
+    margin-bottom: 0;
 }
 
 /* ==========================================================================
@@ -734,7 +790,19 @@ body.dark-mode .moon-icon { display: none; }
     height: 300px;
     background: var(--bg-secondary);
     border-radius: 12px;
-    border: 1px dashed var(--border-color);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.service-detail-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-detail-image .placeholder-icon {
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1070,6 +1138,10 @@ body.dark-mode .moon-icon { display: none; }
     }
 
     .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .who-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     

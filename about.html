@@ -6,13 +6,10 @@
     <meta name="description" content="Meet the founders of GeoResilience Hub — Emmanuel Yerbo (GeoAI & Hydrology) and Gifty Gyamera-Annor (Land & Urban Planning). 30+ ESRI certifications.">
     <title>About Us | GeoResilience Hub</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <!-- Lucide Icons (pinned version) -->
     <script src="https://unpkg.com/lucide@0.263.1"></script>
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="dark-mode">
@@ -21,10 +18,9 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <i data-lucide="globe-2" class="logo-icon"></i>
+                <img src="img/logo.jpeg" alt="GeoResilience Hub Logo" class="logo-img">
                 <span>GeoResilience Hub</span>
             </a>
-            
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html" class="active">About Us</a></li>
@@ -33,16 +29,12 @@
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-
             <div class="nav-actions">
                 <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
                     <i data-lucide="sun" class="sun-icon"></i>
                     <i data-lucide="moon" class="moon-icon"></i>
                 </button>
-                <a href="contact.html" class="btn btn-primary">Get Quote</a>
-                <button class="mobile-menu-btn" aria-label="Open menu">
-                    <i data-lucide="menu"></i>
-                </button>
+                <button class="mobile-menu-btn" aria-label="Open menu"><i data-lucide="menu"></i></button>
             </div>
         </div>
     </nav>
@@ -67,8 +59,8 @@
     <header class="page-header" style="padding-top: 10rem; padding-bottom: 4rem; text-align: center;">
         <div class="container">
             <h1>About <span class="highlight">GeoResilience Hub</span></h1>
-            <p style="max-width: 600px; margin: 0 auto; color: var(--text-secondary); font-size: 1.1rem;">
-                We are a dedicated team of geospatial experts combining GIS mapping, drone technology, and AI to build climate resilience and optimize land use in West Africa.
+            <p style="max-width: 650px; margin: 0 auto; color: var(--text-secondary); font-size: 1.1rem;">
+                We are a dedicated team of geospatial experts combining GIS mapping, drone technology, and AI to build climate resilience and optimize land use in West Africa. Our mission is to bridge the gap between complex spatial data and actionable insight — empowering communities, researchers, and institutions to make better decisions. We believe that accessible geospatial intelligence is the foundation of sustainable development.
             </p>
         </div>
     </header>
@@ -77,14 +69,14 @@
     <section class="team-section section">
         <div class="container">
             <div class="section-header center">
-                <h2>Meet The Founders</h2>
+                <h2>Meet The Team</h2>
             </div>
             
             <div class="grid-2">
                 <!-- Emmanuel Profile -->
                 <div class="team-card glass-card reveal">
                     <div class="profile-image-placeholder">
-                        <i data-lucide="user" style="width: 48px; height: 48px; color: var(--text-secondary);"></i>
+                        <img src="img/logo.jpeg" alt="GeoResilience Hub" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
                     </div>
                     <h3>Emmanuel Yerbo</h3>
                     <h4>GeoAI & Hydrology Lead</h4>
@@ -100,7 +92,7 @@
                 <!-- Gifty Profile -->
                 <div class="team-card glass-card reveal">
                     <div class="profile-image-placeholder">
-                        <i data-lucide="user" style="width: 48px; height: 48px; color: var(--text-secondary);"></i>
+                        <img src="img/logo.jpeg" alt="GeoResilience Hub" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
                     </div>
                     <h3>Gifty Gyamera-Annor</h3>
                     <h4>Land & Urban Planning Lead</h4>
@@ -139,14 +131,12 @@
         <div class="container footer-grid">
             <div class="footer-brand">
                 <a href="index.html" class="logo">
-                    <i data-lucide="globe-2" class="logo-icon"></i>
+                    <img src="img/logo.jpeg" alt="GeoResilience Hub Logo" class="logo-img">
                     <span>GeoResilience Hub</span>
                 </a>
                 <p>Turning Spatial Data into Real-World Solutions.</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/emmanuelyerbo"><i data-lucide="linkedin"></i></a>
-                    <a href="https://github.com/Emmanuel-Yerbo"><i data-lucide="github"></i></a>
-                    <a href="#"><i data-lucide="twitter"></i></a>
+                <div class="social-links" style="margin-top: 1rem;">
+                    <a href="index.html"><img src="img/logo.jpeg" alt="GeoResilience Hub" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;"></a>
                 </div>
             </div>
             <div class="footer-links">
@@ -177,10 +167,7 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="js/main.js"></script>
-    <script>
-        lucide.createIcons();
-    </script>
+    <script>lucide.createIcons();</script>
 </body>
 </html>
