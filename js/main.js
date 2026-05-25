@@ -119,6 +119,43 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileNavClose) mobileNavClose.addEventListener('click', closeMobileMenu);
     if (mobileOverlay) mobileOverlay.addEventListener('click', closeMobileMenu);
 
+    // Mobile Dropdown Menu Toggle
+    const mobileNavToggles = document.querySelectorAll('.mobile-nav-toggle');
+    mobileNavToggles.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggle.classList.toggle('active');
+            const menuId = toggle.getAttribute('data-menu');
+            const submenu = document.getElementById(menuId + '-menu');
+            if (submenu) {
+                submenu.classList.toggle('active');
+            }
+        });
+    });
+
+    // Lazy Load Images (Mobile Data Optimization)
+    if ('IntersectionObserver' in window) {
+        const lazyImages = document.querySelectorAll('img[data-src]');
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.getAttribute('data-src');
+                    img.removeAttribute('data-src');
+                    observer.unobserve(img);
+                }
+            });
+        }, { rootMargin: '50px' });
+
+        lazyImages.forEach(img => imageObserver.observe(img));
+    } else {
+        // Fallback for older browsers
+        const lazyImages = document.querySelectorAll('img[data-src]');
+        lazyImages.forEach(img => {
+            img.src = img.getAttribute('data-src');
+        });
+    }
+
     // 6. Scroll Reveal (Intersection Observer)
     const revealElements = document.querySelectorAll('.reveal');
     if (revealElements.length > 0) {
@@ -132,5 +169,175 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { threshold: 0.1 });
 
         revealElements.forEach(el => revealObserver.observe(el));
+    }
+
+    // 7. FORM VALIDATION & EMAIL INTEGRATION
+    const contactForm = document.querySelector('form');
+    if (contactForm) {
+        const formContainer = contactForm.closest('.contact-form-container');
+        
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.textContent;
+            
+            // Validate form fields
+            if (!validateContactForm()) {
+                return;
+            }
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = '📤 Sending...';
+            
+            try {
+                // Submit to Formspree
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Success
+                    showFormMessage('✅ Message sent successfully! We\'ll get back to you within 24 hours.', 'success');
+                    contactForm.reset();
+                    submitBtn.textContent = originalBtnText;
+                    submitBtn.disabled = false;
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                showFormMessage('❌ Error sending message. Please try again or email us directly.', 'error');
+                submitBtn.textContent = originalBtnText;
+                submitBtn.disabled = false;
+            }
+        });
+        
+        // Real-time validation on input
+        const inputs = contactForm.querySelectorAll('.form-control');
+        inputs.forEach(input => {
+            input.addEventListener('blur', () => validateField(input));
+            input.addEventListener('focus', () => clearFieldError(input));
+        });
+    }
+
+    // Form validation helper functions
+    function validateContactForm() {
+        const name = document.getElementById('name')?.value.trim();
+        const email = document.getElementById('email')?.value.trim();
+        const message = document.getElementById('message')?.value.trim();
+        const service = document.getElementById('service')?.value;
+        
+        let isValid = true;
+        
+        // Name validation
+        if (!name || name.length < 2) {
+            setFieldError('name', 'Please enter a valid name');
+            isValid = false;
+        }
+        
+        // Email validation
+        if (!isValidEmail(email)) {
+            setFieldError('email', 'Please enter a valid email address');
+            isValid = false;
+        }
+        
+        // Service selection
+        if (!service) {
+            setFieldError('service', 'Please select a service');
+            isValid = false;
+        }
+        
+        // Message validation
+        if (!message || message.length < 10) {
+            setFieldError('message', 'Message must be at least 10 characters long');
+            isValid = false;
+        }
+        
+        return isValid;
+    }
+
+    function validateField(field) {
+        if (!field) return;
+        
+        const name = field.getAttribute('name');
+        const value = field.value.trim();
+        
+        let error = '';
+        
+        switch(name) {
+            case 'name':
+                if (!value || value.length < 2) error = 'Please enter a valid name';
+                break;
+            case 'email':
+                if (!isValidEmail(value)) error = 'Invalid email address';
+                break;
+            case 'message':
+                if (!value || value.length < 10) error = 'Message must be at least 10 characters';
+                break;
+            case 'service':
+                if (!value) error = 'Please select a service';
+                break;
+        }
+        
+        if (error) {
+            setFieldError(name, error);
+        } else {
+            clearFieldError(field);
+        }
+    }
+
+    function isValidEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+
+    function setFieldError(fieldName, message) {
+        const field = document.querySelector(`[name="${fieldName}"]`);
+        if (field) {
+            field.classList.add('error');
+            const errorDiv = field.nextElementSibling;
+            if (errorDiv?.classList.contains('error-message')) {
+                errorDiv.textContent = message;
+            } else {
+                const newError = document.createElement('div');
+                newError.className = 'error-message';
+                newError.textContent = message;
+                field.parentNode.insertBefore(newError, field.nextSibling);
+            }
+        }
+    }
+
+    function clearFieldError(field) {
+        if (field) {
+            field.classList.remove('error');
+            const errorDiv = field.parentNode?.querySelector('.error-message');
+            if (errorDiv) errorDiv.remove();
+        }
+    }
+
+    function showFormMessage(message, type) {
+        const form = document.querySelector('form');
+        if (!form) return;
+        
+        // Remove old message
+        const oldMsg = form.parentNode?.querySelector('.form-message');
+        if (oldMsg) oldMsg.remove();
+        
+        const msgDiv = document.createElement('div');
+        msgDiv.className = `form-message form-message-${type}`;
+        msgDiv.textContent = message;
+        form.parentNode.insertBefore(msgDiv, form);
+        
+        // Auto-remove success message after 5 seconds
+        if (type === 'success') {
+            setTimeout(() => msgDiv.remove(), 5000);
+        }
     }
 });

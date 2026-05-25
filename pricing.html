@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Transparent, upfront pricing for GeoResilience Hub geospatial services. From GHS 500 for basic maps to custom enterprise solutions.">
+    <meta name="title" content="Pricing | GeoResilience Hub">
+    <meta name="description" content="Transparent pricing for geospatial services. Choose from Basic, Standard, or Premium tiers. Custom quotes available.">
+    <meta name="keywords" content="GIS pricing, geospatial consulting rates, flood mapping cost, transparent pricing">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://georesiliencehub.com/pricing.html">
+    <meta property="og:title" content="Pricing | GeoResilience Hub">
+    <meta property="og:description" content="Transparent, flexible pricing for all your geospatial needs.">
+    <meta property="twitter:card" content="summary">
+    <link rel="canonical" href="https://georesiliencehub.com/pricing.html">
     <title>Pricing | GeoResilience Hub</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
     <!-- Lucide Icons (pinned version) -->
     <script src="https://unpkg.com/lucide@0.263.1"></script>
@@ -28,7 +37,16 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li class="nav-item">
+                    <a href="services.html">Services <i data-lucide="chevron-down" style="width: 16px; height: 16px;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="services.html#geospatial">Geospatial & Mapping</a>
+                        <a href="services.html#research">Research & Data Analysis</a>
+                        <a href="services.html#fielddata">Field Data Collection</a>
+                        <a href="services.html#drone">Drone & High-Res Mapping</a>
+                        <a href="services.html#training">GIS Training</a>
+                    </div>
+                </li>
                 <li><a href="map.html">Interactive Map</a></li>
                 <li><a href="pricing.html" class="active">Pricing</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -57,7 +75,21 @@
         <div class="mobile-nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
+            
+            <!-- Mobile Dropdown for Services -->
+            <div class="mobile-nav-item">
+                <button class="mobile-nav-toggle" data-menu="services">
+                    Services <i data-lucide="chevron-down" style="width: 16px; height: 16px;"></i>
+                </button>
+                <div class="mobile-submenu" id="services-menu">
+                    <a href="services.html#geospatial">Geospatial & Mapping</a>
+                    <a href="services.html#research">Research & Data Analysis</a>
+                    <a href="services.html#fielddata">Field Data Collection</a>
+                    <a href="services.html#drone">Drone & High-Res Mapping</a>
+                    <a href="services.html#training">GIS Training</a>
+                </div>
+            </div>
+            
             <a href="map.html">Interactive Map</a>
             <a href="pricing.html" class="active">Pricing</a>
             <a href="contact.html">Contact</a>

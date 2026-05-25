@@ -1,0 +1,13 @@
+# Robots.txt for GeoResilience Hub
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: *.pdf$
+
+# Crawl delay for respect to server
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://georesiliencehub.com/sitemap.xml

@@ -3,14 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GeoResilience Hub — Advanced GIS, drone mapping, and flood risk analysis for West Africa. Data-driven geospatial solutions for NGOs, governments, and developers.">
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="GeoResilience Hub | Geospatial Solutions for West Africa">
+    <meta name="description" content="Advanced GIS, drone mapping, and flood risk analysis for NGOs, governments, and developers. Transparent pricing. Interactive flood maps. Dark mode.">
+    <meta name="keywords" content="GIS, geospatial analysis, flood mapping, drone mapping, West Africa, Ghana, remote sensing, urban planning">
+    <meta name="author" content="Emmanuel Yerbo, Gifty Gyamera-Annor">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://georesiliencehub.com/">
+    <meta property="og:title" content="GeoResilience Hub | Geospatial Solutions">
+    <meta property="og:description" content="Data-driven geospatial solutions for West Africa. Flood mapping, GIS analysis, drone mapping.">
+    <meta property="og:site_name" content="GeoResilience Hub">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://georesiliencehub.com/">
+    <meta property="twitter:title" content="GeoResilience Hub | Geospatial Solutions">
+    <meta property="twitter:description" content="Advanced GIS, drone mapping, and flood risk analysis for West Africa.">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://georesiliencehub.com/">
+    
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "GeoResilience Hub",
+      "url": "https://georesiliencehub.com",
+      "description": "Advanced geospatial consulting firm offering GIS, drone mapping, and flood risk analysis.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+233-556834650",
+        "contactType": "Customer Support"
+      }
+    }
+    </script>
+    
     <title>GeoResilience Hub | Geospatial Solutions</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@0.263.1"></script>
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Performance & PWA -->
+    <meta name="theme-color" content="#0f1117">
+    <meta name="mobile-web-app-capable" content="yes">
 </head>
 <body class="dark-mode">
     
@@ -25,7 +68,16 @@
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li class="nav-item">
+                    <a href="services.html">Services <i data-lucide="chevron-down" style="width: 16px; height: 16px;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="services.html#geospatial">Geospatial & Mapping</a>
+                        <a href="services.html#research">Research & Data Analysis</a>
+                        <a href="services.html#fielddata">Field Data Collection</a>
+                        <a href="services.html#drone">Drone & High-Res Mapping</a>
+                        <a href="services.html#training">GIS Training</a>
+                    </div>
+                </li>
                 <li><a href="map.html">Interactive Map</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -54,7 +106,21 @@
         <div class="mobile-nav-links">
             <a href="index.html" class="active">Home</a>
             <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
+            
+            <!-- Mobile Dropdown for Services -->
+            <div class="mobile-nav-item">
+                <button class="mobile-nav-toggle" data-menu="services">
+                    Services <i data-lucide="chevron-down" style="width: 16px; height: 16px;"></i>
+                </button>
+                <div class="mobile-submenu" id="services-menu">
+                    <a href="services.html#geospatial">Geospatial & Mapping</a>
+                    <a href="services.html#research">Research & Data Analysis</a>
+                    <a href="services.html#fielddata">Field Data Collection</a>
+                    <a href="services.html#drone">Drone & High-Res Mapping</a>
+                    <a href="services.html#training">GIS Training</a>
+                </div>
+            </div>
+            
             <a href="map.html">Interactive Map</a>
             <a href="pricing.html">Pricing</a>
             <a href="contact.html">Contact</a>
