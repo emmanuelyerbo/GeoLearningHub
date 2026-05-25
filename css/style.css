@@ -243,6 +243,11 @@ ul {
     background: var(--bg-secondary);
 }
 
+.theme-btn svg, .theme-btn i {
+    width: 20px;
+    height: 20px;
+}
+
 body:not(.dark-mode) .sun-icon { display: none; }
 body.dark-mode .moon-icon { display: none; }
 
