@@ -2,31 +2,45 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Theme Toggle (Dark/Light Mode)
-    const themeBtn = document.getElementById('theme-toggle');
+    const themeToggleBtn = document.getElementById('themeToggle');
     const body = document.body;
     
-    // Check local storage for theme preference
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        if (savedTheme === 'light') {
-            body.classList.remove('dark-mode');
-        } else {
-            body.classList.add('dark-mode');
-        }
-    } else {
-        // Default is dark mode in our HTML
-        localStorage.setItem('theme', 'dark');
-    }
+    if (themeToggleBtn) {
+        const themeIcon = themeToggleBtn.querySelector('i');
 
-    if(themeBtn) {
-        themeBtn.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
+        // Check for saved theme preference or use system preference
+        const savedTheme = localStorage.getItem('theme');
+        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        const currentTheme = savedTheme || systemTheme;
+
+        // Apply the initial theme
+        if (currentTheme === 'dark') {
+            body.classList.add('dark-mode');
+            if (themeIcon) {
+                themeIcon.className = 'fas fa-sun';
+            }
+        } else {
+            body.classList.remove('dark-mode');
+            if (themeIcon) {
+                themeIcon.className = 'fas fa-moon';
+            }
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            const isDark = body.classList.contains('dark-mode');
             
-            // Save preference
-            if (body.classList.contains('dark-mode')) {
-                localStorage.setItem('theme', 'dark');
-            } else {
+            if (isDark) {
+                body.classList.remove('dark-mode');
                 localStorage.setItem('theme', 'light');
+                if (themeIcon) {
+                    themeIcon.className = 'fas fa-moon';
+                }
+            } else {
+                body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+                if (themeIcon) {
+                    themeIcon.className = 'fas fa-sun';
+                }
             }
         });
     }

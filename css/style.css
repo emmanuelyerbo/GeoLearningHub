@@ -11,6 +11,7 @@
     --accent-green: #27ae60;
     --accent-green-hover: #219653;
     --accent-gold: #d4a017;
+    --accent-color: #27ae60;
     
     --text-primary: #1a1a2e;
     --text-secondary: #6b7280;
@@ -34,6 +35,7 @@
     --accent-green: #2ecc71;
     --accent-green-hover: #27ae60;
     --accent-gold: #f0c040;
+    --accent-color: #2ecc71;
     
     --text-primary: #e8e8e8;
     --text-secondary: #8b8fa3;
@@ -272,44 +274,26 @@ ul {
     gap: 1rem;
 }
 
-.theme-btn {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    color: var(--accent-gold);
+/* Toggle Button Styling */
+.theme-toggle {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.2rem;
     cursor: pointer;
-    padding: 0.5rem 0.75rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.4rem;
-    border-radius: 999px;
-    transition: all 0.3s ease;
-    font-size: 0.8rem;
-    font-weight: 500;
-    font-family: 'Inter', sans-serif;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
-.theme-btn:hover {
-    background: var(--accent-green);
-    color: #fff;
-    border-color: var(--accent-green);
-    box-shadow: 0 0 12px rgba(46, 204, 113, 0.4);
+.theme-toggle:hover {
+    color: var(--accent-color);
+    background: rgba(128, 128, 128, 0.1);
 }
-
-.theme-btn svg, .theme-btn i {
-    width: 18px;
-    height: 18px;
-}
-
-/* In dark mode: show sun icon + "Light" label */
-body.dark-mode .moon-icon { display: none; }
-body.dark-mode .theme-label-dark { display: none; }
-body.dark-mode .theme-label-light { display: inline; }
-
-/* In light mode: show moon icon + "Dark" label */
-body:not(.dark-mode) .sun-icon { display: none; }
-body:not(.dark-mode) .theme-label-light { display: none; }
-body:not(.dark-mode) .theme-label-dark { display: inline; }
 
 .mobile-menu-btn {
     display: none;
