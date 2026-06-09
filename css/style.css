@@ -297,10 +297,23 @@ ul {
 
 .mobile-menu-btn {
     display: none;
-    background: none;
+    background: transparent;
     border: none;
     color: var(--text-primary);
     cursor: pointer;
+    font-size: 1.4rem;
+    padding: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.mobile-menu-btn:hover {
+    color: var(--accent-green);
+    background: rgba(128, 128, 128, 0.1);
 }
 
 /* Mobile Nav Panel */
@@ -1222,7 +1235,9 @@ ul {
     .hero {
         grid-template-columns: 1fr;
         text-align: center;
-        padding-top: 8rem;
+        padding-top: 7rem;
+        padding-bottom: 3rem;
+        gap: 2.5rem;
     }
     
     .hero-content p {
@@ -1235,30 +1250,38 @@ ul {
 
     .showcase-flex {
         grid-template-columns: 1fr;
+        padding: 1.5rem;
+        gap: 2rem;
     }
 
     .grid-3 {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
     
     .who-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
     
     .footer-grid {
         grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
     }
 
     .contact-grid, .testimonials-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     .grid-2 {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     .pricing-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     .pricing-card.popular {
@@ -1268,10 +1291,34 @@ ul {
     .service-detail-card,
     .service-detail-card:nth-child(even) {
         grid-template-columns: 1fr;
+        padding: 2rem;
+        gap: 2rem;
+    }
+    
+    .service-detail-card:nth-child(even) .service-detail-text,
+    .service-detail-card:nth-child(even) .service-detail-image {
+        order: unset;
     }
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+    
+    .section {
+        padding: 3.5rem 0;
+    }
+    
+    .page-header {
+        padding-top: 6.5rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+    
+    .page-header p {
+        font-size: 1rem !important;
+    }
+
     .nav-links {
         display: none;
     }
@@ -1281,7 +1328,7 @@ ul {
     }
     
     .mobile-menu-btn {
-        display: block;
+        display: flex;
     }
 
     .mobile-nav {
@@ -1290,10 +1337,18 @@ ul {
 
     .grid-3 {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .who-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
     }
 
     .stats-grid {
         grid-template-columns: 1fr;
+        padding: 2rem 1.5rem;
+        gap: 2rem;
     }
 
     .footer-grid {
@@ -1307,8 +1362,20 @@ ul {
         text-align: center;
     }
     
+    .footer-brand p {
+        margin: 1rem auto 0;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
     }
     
     /* Mobile data optimization */
@@ -1319,6 +1386,84 @@ ul {
     
     .contact-map {
         height: 250px;
+    }
+    
+    .team-card {
+        padding: 1.75rem 1.25rem;
+    }
+    
+    .team-card p {
+        text-align: center;
+    }
+    
+    .service-detail-card {
+        padding: 1.5rem 1.25rem;
+        margin-bottom: 2rem;
+    }
+    
+    .service-detail-text h3 {
+        font-size: 1.6rem;
+    }
+    
+    .service-detail-image {
+        height: 220px;
+    }
+
+    .pricing-card {
+        padding: 2.5rem 1.5rem;
+    }
+    
+    .testimonial-card {
+        padding: 1.75rem 1.25rem;
+    }
+    
+    .contact-form-container,
+    .contact-info-card {
+        padding: 2rem 1.25rem;
+    }
+    
+    .faq-question {
+        padding: 1.25rem;
+        font-size: 0.95rem;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.9rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .stat-item h3 {
+        font-size: 2.5rem;
+    }
+    
+    .tools-grid {
+        gap: 1rem;
+    }
+    
+    .tool-tag {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .mobile-nav {
+        width: 260px;
     }
 }
 
